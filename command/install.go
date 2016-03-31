@@ -1,6 +1,10 @@
 package command
 
-import "github.com/codegangsta/cli"
+import (
+	"fmt"
+	"github.com/codegangsta/cli"
+)
 
-func CmdInstall(c *cli.Context) {
+func CmdInstall(c *cli.Context, directory string) {
+	fmt.Printf("%s", directory)
 }
