@@ -1,4 +1,4 @@
-# spm
+# Sketch Plugin Manager
 
 ## Description
 
