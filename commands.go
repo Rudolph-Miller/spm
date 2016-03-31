@@ -51,6 +51,7 @@ func Directory() string {
 		}
 	}
 	fmt.Fprintf(os.Stderr, "Could not find Sketch plugins directory.\nPlease specify --dir option or SKETCH_PLUGIN_DIR env var.")
+	os.Exit(1)
 	return ""
 }
 
@@ -67,6 +68,6 @@ var Commands = []cli.Command{
 }
 
 func CommandNotFound(c *cli.Context, command string) {
-	fmt.Fprintf(os.Stderr, "%s: '%s' is not a %s command. See '%s --help'.", c.App.Name, command, c.App.Name, c.App.Name)
+	fmt.Fprintf(os.Stderr, "%s: '%s' is not a %s command. See '%s --help'.\n", c.App.Name, command, c.App.Name, c.App.Name)
 	os.Exit(2)
 }
