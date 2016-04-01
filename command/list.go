@@ -25,7 +25,7 @@ func CmdList(c *cli.Context, directory string) {
 		}
 		switch source.Type() {
 		case spm_struct.Git:
-			fmt.Printf("[GIT] ")
+			fmt.Printf("[Git] ")
 		case spm_struct.Other:
 			fmt.Printf("[Other] ")
 		}
