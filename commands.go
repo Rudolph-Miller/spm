@@ -57,9 +57,18 @@ func Directory() string {
 
 var Commands = []cli.Command{
 	{
+		Name:    "list",
+		Aliases: []string{"l"},
+		Usage:   "List plugins.",
+		Action: func(c *cli.Context) {
+			command.CmdList(c, Directory())
+		},
+		Flags: []cli.Flag{},
+	},
+	{
 		Name:    "install",
 		Aliases: []string{"i"},
-		Usage:   "Install plugin",
+		Usage:   "Install plugin.",
 		Action: func(c *cli.Context) {
 			command.CmdInstall(c, Directory())
 		},
