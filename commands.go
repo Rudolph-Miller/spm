@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/Rudolph-Miller/spm/command"
+	"github.com/Rudolph-Miller/spm/util"
 	"github.com/codegangsta/cli"
 	"os"
 	"os/user"
@@ -25,17 +26,6 @@ var GlobalFlags = []cli.Flag{
 	},
 }
 
-func exists(path string) (bool, error) {
-	_, err := os.Stat(path)
-	if err == nil {
-		return true, nil
-	}
-	if os.IsNotExist(err) {
-		return false, nil
-	}
-	return true, err
-}
-
 func Directory() string {
 	if len(directory) > 0 {
 		return directory
@@ -43,7 +33,7 @@ func Directory() string {
 		for _, dir := range default_directories {
 			usr, _ := user.Current()
 			path := strings.Replace(dir, "~", usr.HomeDir, 1)
-			exists, _ := exists(path)
+			exists, _ := spm_util.Exists(path)
 			if exists {
 				directory = path
 				return directory
