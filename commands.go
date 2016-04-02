@@ -64,6 +64,22 @@ var Commands = []cli.Command{
 		},
 		Flags: []cli.Flag{},
 	},
+	{
+		Name:    "export",
+		Aliases: []string{"e"},
+		Usage:   "Export plugins into spmfile",
+		Action: func(c *cli.Context) {
+			command.CmdExport(c, Directory())
+		},
+		Flags: []cli.Flag{
+			cli.StringFlag{
+				Name:   "output, o",
+				Value:  "Spmfile",
+				EnvVar: "SPM_OUTPUT_FILE",
+				Usage:  "output file to export plugins.",
+			},
+		},
+	},
 }
 
 func CommandNotFound(c *cli.Context, command string) {
