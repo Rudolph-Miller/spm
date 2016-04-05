@@ -1,5 +1,7 @@
 # Sketch Plugin Manager
 
+It can manage your plugins for Sketch.
+
 ## Description
 
 ## Usage
