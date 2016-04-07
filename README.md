@@ -22,6 +22,7 @@ AUTHOR(S):
 COMMANDS:
    list, l  List plugins.
    install, i Install plugin.
+   uninstall, u Uninstall plugin.
    export, e  Export plugins into spmfile
    help, h  Shows a list of commands or help for one command
    
