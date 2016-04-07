@@ -65,6 +65,15 @@ var Commands = []cli.Command{
 		Flags: []cli.Flag{},
 	},
 	{
+		Name:    "uninstall",
+		Aliases: []string{"u"},
+		Usage:   "Uninstall plugin.",
+		Action: func(c *cli.Context) {
+			command.CmdUninstall(c, Directory())
+		},
+		Flags: []cli.Flag{},
+	},
+	{
 		Name:    "export",
 		Aliases: []string{"e"},
 		Usage:   "Export plugins into spmfile",
