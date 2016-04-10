@@ -47,6 +47,15 @@ func Directory() string {
 
 var Commands = []cli.Command{
 	{
+		Name:  "info",
+		Usage: "Information for Sketch plugins.",
+		Action: func(c *cli.Context) {
+			directory = strings.Replace(Directory(), " ", "\\ ", -1)
+			fmt.Printf("Directory: %s\n", directory)
+		},
+		Flags: []cli.Flag{},
+	},
+	{
 		Name:    "list",
 		Aliases: []string{"l"},
 		Usage:   "List plugins.",
