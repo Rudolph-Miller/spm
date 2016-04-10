@@ -8,28 +8,29 @@ It can manage your plugins for Sketch.
 
 ```
 NAME:
-   spm - 
+   spm -
 
 USAGE:
    commands [global options] command [command options] [arguments...]
-   
+
 VERSION:
    0.1.0
-   
+
 AUTHOR(S):
-   Rudolph-Miller 
-   
+   Rudolph-Miller
+
 COMMANDS:
-   list, l  List plugins.
-   install, i Install plugin.
+   info         Information for Sketch plugins.
+   list, l      List plugins.
+   install, i   Install plugin.
    uninstall, u Uninstall plugin.
-   export, e  Export plugins into spmfile
-   help, h  Shows a list of commands or help for one command
-   
+   export, e    Export plugins into spmfile
+   help, h      Shows a list of commands or help for one command
+
 GLOBAL OPTIONS:
-   --dir, -d    directory for Sketch plugins [$SKETCH_PLUGIN_DIR]
-   --help, -h   show help
-   --version, -v  print the version
+   --dir, -d            directory for Sketch plugins [$SKETCH_PLUGIN_DIR]
+   --help, -h           show help
+   --version, -v        print the version
 ```
 
 ## Install
