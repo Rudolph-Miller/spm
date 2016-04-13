@@ -56,6 +56,16 @@ var Commands = []cli.Command{
 		Flags: []cli.Flag{},
 	},
 	{
+		Name:    "directory",
+		Aliases: []string{"d"},
+		Usage:   "Directory for Sketch plugins.",
+		Action: func(c *cli.Context) {
+			directory = strings.Replace(Directory(), " ", "\\ ", -1)
+			fmt.Println(directory)
+		},
+		Flags: []cli.Flag{},
+	},
+	{
 		Name:    "list",
 		Aliases: []string{"l"},
 		Usage:   "List plugins.",
