@@ -42,6 +42,30 @@ To install, use `go get`:
 $ go get -d github.com/Rudolph-Miller/spm
 ```
 
+## Commands
+
+### info
+
+### directory, d
+
+```
+$ spm d
+/Users/sketch-user/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins/
+
+$ spm d | xargs mv ~/Downloads/AwesomePlugin.sketchplugin
+```
+
+### list, l
+
+
+### install, i
+
+### uninstall, u
+
+### export, e
+
+### help, h
+
 ## Contribution
 
 1. Fork ([https://github.com/Rudolph-Miller/spm/fork](https://github.com/Rudolph-Miller/spm/fork))
