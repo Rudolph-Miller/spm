@@ -1,4 +1,4 @@
-# Sketch Plugin Manager
+# [WIP] Sketch Plugin Manager
 
 It can manage your plugins for Sketch.
 
